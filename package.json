@@ -9,5 +9,8 @@
   "keywords": [],
   "author": "",
   "homepage": "https://cdonougherlee.github.io/caesarcipher",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
