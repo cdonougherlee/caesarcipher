@@ -10,6 +10,7 @@ html, body{
   margin: 0;
   height: 100%;
   background-image: linear-gradient(#F97794, #623AA2);
+  background-repeat: no-repeat;
 }
 
 footer {
@@ -22,5 +23,16 @@ footer {
 @media (max-width: 992px) {
   footer {
     position: relative;
+  }
+  
+  html, body{
+    margin: 0;
+    height: auto;
+  }
+}
+
+@media (max-width: 668px) {
+  footer{
+    height: 70px;
   }
 }
