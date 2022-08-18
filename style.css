@@ -7,8 +7,9 @@ select {
 }
 
 html, body{
+  position: relative;
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
   background-image: linear-gradient(#F97794, #623AA2);
   background-repeat: no-repeat;
 }
