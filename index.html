@@ -9,129 +9,128 @@
 </head>
 <body>
 
-    <!-- Introduction -->
-    <header class="container text-white text-center">
-      <h1 class="display-3 p-3 pt-4">Introduction</h1>
-      <p class="lead">The Caesar cipher (aka the shift cipher) is a simple and widely known encryption technique. It was invented by Julius Caesar during times of the Roman Empire for confidential military communications. It works as a substitution cipher, where each letter in the alphabet is replaced by another letter located a fixed number of positions down the alphabet (which wraps around itself). For example, if the key was 3 and the shift direction was to the right, the letter B would be replaced with E.</p>
-    </header>
+  <!-- Introduction -->
+  <header class="container text-white text-center">
+    <h1 class="display-3 p-3 pt-4">Introduction</h1>
+    <p class="lead">The Caesar cipher (aka the shift cipher) is a simple and widely known encryption technique. It was invented by Julius Caesar during times of the Roman Empire for confidential military communications. It works as a substitution cipher, where each letter in the alphabet is replaced by another letter located a fixed number of positions down the alphabet (which wraps around itself). For example, if the key was 3 and the shift direction was to the right, the letter B would be replaced with E.</p>
+  </header>
 
-    <!-- How to use -->
-    <section class="container text-white text-center">
-      <h2 class="display-4 p-3">How to use</h2>
-      <p class="lead">Type in the text to be encrypted/decrypted below, and the result will be displayed in real time, similar to  how Google Translate acts. For the encryption function, the settings you can change are the key and the direction of the shift (default set to 3 and right respectively). For decryption, both left shift and right shift results will be displayed.</p>
-    </section>
+  <!-- How to use -->
+  <section class="container text-white text-center">
+    <h2 class="display-4 p-3">How to use</h2>
+    <p class="lead">Type in the text to be encrypted/decrypted below, and the result will be displayed in real time, similar to  how Google Translate acts. For the encryption function, the settings you can change are the key and the direction of the shift (default set to 3 and right respectively). For decryption, both left shift and right shift results will be displayed.</p>
+  </section>
 
-    <!-- Input/Output fields -->
-    <section class="container mt-5">
+  <!-- Input/Output fields -->
+  <section class="container mt-5">
+    <div class="row text-center g-4">
+      <div class="col-lg">
+        <div class="form-floating">
+          <input type="text" class="form-control text-feild border-3 border-dark shadow-lg" placeholder="user-input" id="user-input">
+          <label for="user-input">Place text here</label>
+        </div>
+      </div>
+      <div class="col-lg">  
+        <div class="form-floating">
+          <input type="text" class="form-control text-feild border-3 border-dark shadow-lg bg-white" placeholder="result-1" id="result-1" disabled>
+          <label for="result-1" id="result-1-label">Encrypted text</label>
+        </div>
+      </div>
+      <div class="col-lg">
+        <div class="form-floating">
+          <input type="text" class="form-control text-feild bg-secondary border-3 border-dark shadow-lg" placeholder="result-2" id="result-2" disabled>
+          <label for="result-2" id="result-2-label"></label>          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Settings fields -->
+  <section class="p-5">
+    <div class="container">
       <div class="row text-center g-4">
-        <div class="col-lg">
-          <div class="form-floating">
-            <input type="text" class="form-control text-feild border-3 border-dark shadow-lg" placeholder="user-input" id="user-input">
-            <label for="user-input">Place text here</label>
-          </div>
-        </div>
-        <div class="col-lg">  
-          <div class="form-floating">
-            <input type="text" class="form-control text-feild border-3 border-dark shadow-lg bg-white" placeholder="result-1" id="result-1" disabled>
-            <label for="result-1" id="result-1-label">Encrypted text</label>
-          </div>
-        </div>
-        <div class="col-lg">
-          <div class="form-floating">
-            <input type="text" class="form-control text-feild bg-secondary border-3 border-dark shadow-lg" placeholder="result-2" id="result-2" disabled>
-            <label for="result-2" id="result-2-label"></label>          
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Settings fields -->
-    <section class="p-5">
-      <div class="container">
-        <div class="row text-center g-4">
-
-          <!-- Shift settings -->
-          <div class="col-lg">
-            <div class="box card bg-dark text-light">
-              <div class="card-body text-center">
-                <h3 class="card-title mb-3">Key</h3>
-                <p class="card-text">
-                  Select the number of positions the letters in your text will be shifted over.
-                </p>
-                <div class="d-flex justify-content-center">
-                  <select class="form-select form-select-lg col bg-dark text-primary border-1 border-primary">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option selected value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                  </select>
-                </div>
+        <!-- Shift settings -->
+        <div class="col-lg">
+          <div class="box card bg-dark text-light">
+            <div class="card-body text-center">
+              <h3 class="card-title mb-3">Key</h3>
+              <p class="card-text">
+                Select the number of positions the letters in your text will be shifted over.
+              </p>
+              <div class="d-flex justify-content-center">
+                <select class="form-select form-select-lg col bg-dark text-primary border-1 border-primary">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option selected value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                </select>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Function settings -->
-          <div class="col-lg">
-            <div class="box card bg-dark text-light">
-              <div class="card-body text-center">
-                <h3 class="card-title mb-3">Function</h3>
-                <p class="card-text">
-                  Using your chosen key, select whether to encrypt or decrypt your text.
-                </p>
-                <form>
-                  <input type="radio" class="btn-check function-buttons" name="options-outlined" id="decrypt" value="decrypt" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="decrypt">Decrypt</label>
+        <!-- Function settings -->
+        <div class="col-lg">
+          <div class="box card bg-dark text-light">
+            <div class="card-body text-center">
+              <h3 class="card-title mb-3">Function</h3>
+              <p class="card-text">
+                Using your chosen key, select whether to encrypt or decrypt your text.
+              </p>
+              <form>
+                <input type="radio" class="btn-check function-buttons" name="options-outlined" id="decrypt" value="decrypt" autocomplete="off">
+                <label class="btn btn-outline-primary" for="decrypt">Decrypt</label>
 
-                  <input type="radio" class="btn-check function-buttons" name="options-outlined" id="encrypt" value="encrypt" autocomplete="off" checked>
-                  <label class="btn btn-outline-danger" for="encrypt">Encrypt</label>
-                </form>
-              </div>
+                <input type="radio" class="btn-check function-buttons" name="options-outlined" id="encrypt" value="encrypt" autocomplete="off" checked>
+                <label class="btn btn-outline-danger" for="encrypt">Encrypt</label>
+              </form>
             </div>
           </div>
+        </div>
 
-          <!-- Direction settings -->
-          <div class="col-lg">
-            <div class="box card bg-dark text-light">
-              <div class="card-body text-center">
-                <h3 class="card-title mb-3">Direction</h3>
-                <p class="card-text">
-                  Select the direction of the shift to be used in encryption.
-                </p>
-                <input type="radio" class="btn-check direction-buttons" name="options-outlined-2" id="left" value="leftShift" autocomplete="off">
-                <label class="btn btn-outline-primary" for="left">Left Shift</label>
-                <input type="radio" class="btn-check direction-buttons" name="options-outlined-2" id="right" value="rightShift" autocomplete="off" checked>
-                <label class="btn btn-outline-danger" for="right">Right Shift</label>
-              </div>
+        <!-- Direction settings -->
+        <div class="col-lg">
+          <div class="box card bg-dark text-light">
+            <div class="card-body text-center">
+              <h3 class="card-title mb-3">Direction</h3>
+              <p class="card-text">
+                Select the direction of the shift to be used in encryption.
+              </p>
+              <input type="radio" class="btn-check direction-buttons" name="options-outlined-2" id="left" value="leftShift" autocomplete="off">
+              <label class="btn btn-outline-primary" for="left">Left Shift</label>
+              <input type="radio" class="btn-check direction-buttons" name="options-outlined-2" id="right" value="rightShift" autocomplete="off" checked>
+              <label class="btn btn-outline-danger" for="right">Right Shift</label>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    
-  
+    </div>
+  </section>
+ 
   <footer class="p-2 bg-dark text-white text-center shadow-lg">
     <span class="align-middle">The code for this project can be found at: <a class="text-white text-decoration-none" href="https://github.com/cdonougherlee/caesarcipher">https://github.com/cdonougherlee/caesarcipher</a></span>
   </footer>
